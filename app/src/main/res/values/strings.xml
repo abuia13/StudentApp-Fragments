@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StudentApp</string>
+    <string name="student_name_format">Name: %1$s</string>
+    <string name="student_id_format">ID: %1$s</string>
+    <string name="student_image">Student Image</string>
+
+</resources>
