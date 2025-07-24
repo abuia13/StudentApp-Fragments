@@ -1,6 +1,10 @@
-package com.studentapp.Model
-
+package com.studentapp.model
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 import java.io.Serializable
+
+
+@Parcelize
 data class Student(
     var name: String,
     var id: String,
@@ -8,4 +12,4 @@ data class Student(
     var address: String,
     var isChecked: Boolean = false,
     var imageUri: String? = null
-) : Serializable
+) : Serializable, Parcelable

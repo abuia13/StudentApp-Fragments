@@ -2,12 +2,13 @@ package com.studentapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Parcelable
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.studentapp.Model.StudentRepository
+import com.studentapp.model.StudentRepository
 
 class StudentsRecyclerViewActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -28,7 +29,7 @@ class StudentsRecyclerViewActivity : AppCompatActivity() {
             onItemClick = { position ->
                 val student = studentsList[position]
                 val intent = Intent(this, StudentDetailsActivity::class.java)
-                intent.putExtra("student", student) // ✅ שליחת האובייקט כולו
+                intent.putExtra("student", student as Parcelable)
                 startActivity(intent)
             },
             onCheckClick = { position ->

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentListFragment">
+
+    <fragment
+        android:id="@+id/studentListFragment"
+        android:name="com.studentapp.ui.studentlist.StudentListFragment"
+        android:label="Student List"
+        tools:layout="@layout/fragment_student_list">
+
+        <!-- פעולה ל־AddStudent -->
+        <action
+            android:id="@+id/action_studentList_to_addStudent"
+            app:destination="@id/addStudentFragment" />
+
+        <!-- פעולה ל־StudentDetails -->
+        <action
+            android:id="@+id/action_studentList_to_studentDetails"
+            app:destination="@id/studentDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.studentapp.ui.addstudent.AddStudentFragment"
+        android:label="Add Student"
+        tools:layout="@layout/fragment_add_student" />
+    <fragment
+        android:id="@+id/studentDetailsFragment"
+        android:name="com.studentapp.ui.details.StudentDetailsFragment"
+        android:label="Student Details"
+        tools:layout="@layout/fragment_student_details">
+
+        <argument
+            android:name="student"
+            app:argType="com.studentapp.model.Student" />
+    </fragment>
+
+
+</navigation>
+

@@ -1,4 +1,4 @@
-package com.studentapp.Model
+package com.studentapp.model
 
 object StudentRepository {
     private val studentsList: MutableList<Student> = mutableListOf(

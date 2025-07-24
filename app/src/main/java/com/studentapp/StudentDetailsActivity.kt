@@ -11,8 +11,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
-import com.studentapp.Model.Student
-import com.studentapp.Model.StudentRepository
+import com.studentapp.model.Student
+import com.studentapp.model.StudentRepository
 
 class StudentDetailsActivity : AppCompatActivity() {
 

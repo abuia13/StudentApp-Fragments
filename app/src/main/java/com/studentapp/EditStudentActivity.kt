@@ -1,15 +1,13 @@
 package com.studentapp
 
-import android.app.Activity
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
-import com.studentapp.Model.Student
-import com.studentapp.Model.StudentRepository
+import com.studentapp.model.Student
+import com.studentapp.model.StudentRepository
 
 class EditStudentActivity : AppCompatActivity() {
 
