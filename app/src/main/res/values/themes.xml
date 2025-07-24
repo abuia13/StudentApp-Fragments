@@ -1,0 +1,8 @@
+<!-- themes.xml -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.StudentApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- צבעים, אם תרצה -->
+    </style>
+
+    <style name="Theme.StudentApp" parent="Base.Theme.StudentApp" />
+</resources>
