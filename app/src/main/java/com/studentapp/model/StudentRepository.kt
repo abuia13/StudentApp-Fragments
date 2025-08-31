@@ -19,9 +19,13 @@ object StudentRepository {
         studentsList.remove(student)
     }
 
-    fun updateStudent(index: Int, student: Student) {
-        studentsList[index] = student
+    fun updateStudent(student: Student) {
+        val index = getStudentIndexById(student.id)
+        if (index != null) {
+            studentsList[index] = student
+        }
     }
+
 
     fun getStudent(index: Int): Student {
         return studentsList[index]
@@ -30,4 +34,8 @@ object StudentRepository {
     fun getStudentIndexById(id: String): Int? {
         return studentsList.indexOfFirst { it.id == id }.takeIf { it >= 0 }
     }
+    // StudentRepository.kt
+    fun getStudentById(id: String): Student? =
+        studentsList.find { it.id == id }
+
 }

@@ -6,6 +6,7 @@
     android:paddingTop="?attr/actionBarSize"
     android:clipToPadding="false">
 
+
     <LinearLayout
         android:orientation="vertical"
         android:padding="16dp"
@@ -17,37 +18,36 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:src="@drawable/ic_person"
-            android:contentDescription="@string/student_image"
+            android:contentDescription="Student Image"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="16dp" />
 
+        <!-- Change Image Button -->
         <Button
             android:id="@+id/changeImageButton"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change Image" />
+            android:text="Change Image"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
 
         <!-- Name -->
         <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nameEditText"
                 android:hint="Name"
-                android:enabled="false"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp"
-                />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- ID -->
+        <!-- ID (לא ניתן לעריכה) -->
         <com.google.android.material.textfield.TextInputLayout
+
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -56,49 +56,34 @@
                 android:hint="ID"
                 android:enabled="false"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp"
-                />
-
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Phone -->
         <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/phoneEditText"
                 android:hint="Phone"
-                android:enabled="false"
+                android:inputType="phone"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp"
-                />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Address -->
         <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/addressEditText"
                 android:hint="Address"
-                android:enabled="false"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp"
-                />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Birth Date -->
@@ -111,14 +96,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/birthDateEditText"
                 android:hint="Birth date (dd/MM/yyyy)"
-                android:enabled="false"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp"
-                />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Birth Time -->
@@ -131,34 +113,27 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/birthTimeEditText"
                 android:hint="Birth time (HH:mm)"
-                android:enabled="false"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp"
-                />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Checked -->
         <CheckBox
             android:id="@+id/isCheckedCheckbox"
             android:text="Is Checked"
-            android:enabled="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp" />
 
+        <!-- אם  רק עם Action Bar: -->
         <Button
             android:id="@+id/saveButton"
+            android:text="Save"
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:layout_marginBottom="8dp"
-            android:text="Save" />
+            android:layout_marginTop="16dp" />
     </LinearLayout>
 </ScrollView>

@@ -1,52 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentApp">
 
-        <!-- מסך הוספת סטודנט -->
         <activity
-            android:name=".AddStudentActivity"
-            android:label="New Student"
-            android:exported="false" />
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
 
-        <!-- מסך פרטי סטודנט -->
-        <activity
-            android:name=".StudentDetailsActivity"
-            android:exported="false"
-            android:label="Student Details" />
-
-        <!-- המסך הראשי (החדש) -->
-        <activity
-            android:name=".StudentsRecyclerViewActivity"
-            android:label="Students List"
-            android:exported="true">
-
-            <!-- זה מה שהופך אותו למסך הראשון באפליקציה -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-
-        <!-- MainActivity לא בשימוש כרגע -->
-        <activity
-            android:name=".MainActivity"
-            android:label="Unused"
-            android:exported="false" />
-
-        <activity
-            android:name=".EditStudentActivity"
-            android:label="Edit Student"
-            android:exported="false" />
 
     </application>
 

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/studentListFragment"
         android:name="com.studentapp.ui.studentlist.StudentListFragment"
-        android:label="Student List"
+        android:label="Students List"
         tools:layout="@layout/fragment_student_list">
 
         <!-- פעולה ל־AddStudent -->
@@ -20,6 +20,10 @@
         <action
             android:id="@+id/action_studentList_to_studentDetails"
             app:destination="@id/studentDetailsFragment" />
+        <!-- פעולה ל־EditStudent -->
+        <action
+            android:id="@+id/action_studentList_to_editStudent"
+            app:destination="@id/editStudentFragment" />
     </fragment>
     <fragment
         android:id="@+id/addStudentFragment"
@@ -35,7 +39,22 @@
         <argument
             android:name="student"
             app:argType="com.studentapp.model.Student" />
+        <action
+            android:id="@+id/action_studentDetails_to_editStudent"
+            app:destination="@id/editStudentFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/editStudentFragment"
+        android:name="com.studentapp.ui.editstudent.EditStudentFragment"
+        android:label="Edit Student"
+        tools:layout="@layout/fragment_edit_student">
+
+        <argument
+            android:name="student"
+            app:argType="com.studentapp.model.Student" />
+
+    </fragment>
+
 
 
 </navigation>

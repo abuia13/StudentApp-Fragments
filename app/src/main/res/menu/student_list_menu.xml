@@ -2,8 +2,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menu_add_student"
-        android:title="Add"
-        android:icon="@android:drawable/ic_input_add"
-        app:showAsAction="ifRoom" />
+        android:id="@+id/action_add_student"
+        android:title="Add Student"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add"/>
 </menu>

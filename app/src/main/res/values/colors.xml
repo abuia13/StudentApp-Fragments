@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="purple_strong">#6A1B9A</color> <!-- סגול כהה -->
+    <color name="purple_secondary">#8E24AA</color> <!-- סגול משני -->
+    <color name="background_light">#F5F5F5</color> <!-- רקע כללי -->
 </resources>

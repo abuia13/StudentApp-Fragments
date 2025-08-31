@@ -1,5 +1,6 @@
 package com.studentapp
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,13 +33,23 @@ class StudentAdapter(
         holder.name.text = student.name
         holder.id.text = student.id
         holder.checkBox.isChecked = student.isChecked
-        holder.image.setImageResource(R.drawable.ic_person)
+
+        // Display student image or default icon
+        if (!student.imageUri.isNullOrEmpty()) {
+            holder.image.setImageURI(Uri.parse(student.imageUri))
+            holder.image.background = null
+        } else {
+            holder.image.setImageResource(R.drawable.ic_person)
+            holder.image.setBackgroundResource(R.drawable.circle_background)
+        }
+
         holder.checkBox.setOnClickListener {
             onCheckClick(position)
         }
+
         holder.itemView.setOnClickListener {
             onItemClick(position)
-                   }
+        }
 
     }
 

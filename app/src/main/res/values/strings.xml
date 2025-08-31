@@ -3,5 +3,19 @@
     <string name="student_name_format">Name: %1$s</string>
     <string name="student_id_format">ID: %1$s</string>
     <string name="student_image">Student Image</string>
+    <string name="add_student">Add Student</string>
 
+    <!-- כללים -->
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="save_student">Save Student</string>
+    <string name="success_title">Success</string>
+    <string name="error_title">Error</string>
+
+    <!-- טפסים -->
+    <string name="student_added_success">Student added successfully.</string>
+    <string name="student_updated_success">Student updated successfully.</string>
+    <string name="error_name_required">Name is required</string>
+    <string name="error_id_required">ID is required</string>
 </resources>

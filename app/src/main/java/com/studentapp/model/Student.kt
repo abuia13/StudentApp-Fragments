@@ -11,5 +11,7 @@ data class Student(
     var phone: String,
     var address: String,
     var isChecked: Boolean = false,
-    var imageUri: String? = null
+    var imageUri: String? = null,
+    var birthDate: String? = null,  // dd/MM/yyyy
+    var birthTime: String? = null   // HH:mm
 ) : Serializable, Parcelable
