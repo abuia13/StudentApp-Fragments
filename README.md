@@ -22,3 +22,5 @@ These fields should be implemented with the date view as shown in class. Pressin
  
 All input text fields should be implemented with the same design as the date field.
 
+https://drive.google.com/file/d/1m1HG11Grf2PWbh6uVb2gpsSBsbmqgB4K/view?usp=drive_link
+
